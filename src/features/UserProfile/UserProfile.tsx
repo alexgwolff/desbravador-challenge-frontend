@@ -35,7 +35,7 @@ const UserProfile = () => {
     setOrder(order === "asc" ? "desc" : "asc");
   };
 
-  const response = useSWR("/api/user", () => getUserProfile(username), {
+  const response = useSWR("/api/user", () => getUserProfile(username || ""), {
     suspense: true,
   });
 
